@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\obj\Debug\net6.0\Library.Application.Shared.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\obj\Debug\net6.0\Library.Application.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\obj\Debug\net6.0\Library.Application.Shared.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\obj\Debug\net6.0\Library.Application.Shared.AssemblyInfo.cs
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\obj\Debug\net6.0\Library.Application.Shared.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\bin\Debug\net6.0\Library.Application.Shared.exe
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\bin\Debug\net6.0\Library.Application.Shared.deps.json
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\bin\Debug\net6.0\Library.Application.Shared.runtimeconfig.json
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\bin\Debug\net6.0\Library.Application.Shared.dll
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\bin\Debug\net6.0\Library.Application.Shared.pdb
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\obj\Debug\net6.0\Library.Application.Shared.dll
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\obj\Debug\net6.0\refint\Library.Application.Shared.dll
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\obj\Debug\net6.0\Library.Application.Shared.pdb
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\obj\Debug\net6.0\Library.Application.Shared.genruntimeconfig.cache
+C:\Users\user\source\repos\Library.Application.API\Library.Application.Shared\obj\Debug\net6.0\ref\Library.Application.Shared.dll
