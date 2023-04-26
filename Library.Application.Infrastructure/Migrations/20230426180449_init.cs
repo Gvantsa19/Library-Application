@@ -19,7 +19,9 @@ namespace Library.Application.Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    EntityStatus = table.Column<int>(type: "int", nullable: false),
+                    CreateDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
+                    LastChangeDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -34,7 +36,9 @@ namespace Library.Application.Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    EntityStatus = table.Column<int>(type: "int", nullable: false),
+                    CreateDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
+                    LastChangeDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -92,3 +92,4 @@ C:\Users\user\Desktop\library\Library.Application.Application\obj\Debug\net6.0\r
 C:\Users\user\Desktop\library\Library.Application.Application\obj\Debug\net6.0\Library.Application.Application.pdb
 C:\Users\user\Desktop\library\Library.Application.Application\obj\Debug\net6.0\Library.Application.Application.genruntimeconfig.cache
 C:\Users\user\Desktop\library\Library.Application.Application\obj\Debug\net6.0\ref\Library.Application.Application.dll
+C:\Users\user\Desktop\library\Library.Application.Application\bin\Debug\net6.0\AutoMapper.dll

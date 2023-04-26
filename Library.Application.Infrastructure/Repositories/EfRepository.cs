@@ -14,26 +14,25 @@ namespace Library.Application.Infrastructure.Repositories
         {
             _context = context;
         }
-        public async Task CommitChanges()
+        public virtual async Task<T?> Find(int uId, bool onlyActive = true)
         {
-            await _context.SaveChangesAsync();
+            return await (onlyActive
+                ? _context.Set<T>().Where(x => x.EntityStatus == EntityStatus.Active).SingleOrDefaultAsync(x => x.Id == uId)
+                : _context.Set<T>().SingleOrDefaultAsync(x => x.Id == uId));
         }
 
-        public async Task<T?> Find(int uId, bool onlyActive = true)
+        public virtual IQueryable<T> Query(
+            Expression<Func<T, bool>> expression = null,
+            bool onlyActives = true)
         {
-            return await _context.Set<T>().SingleOrDefaultAsync(x => x.Id == uId);
-        }
-
-        public IQueryable<T> Query(Expression<Func<T, bool>>? expression = null, bool onlyActives = true)
-        {
-            var baseQuery = _context.Set<T>();
+            var baseQuery = onlyActives ? _context.Set<T>().Where(x => x.EntityStatus == EntityStatus.Active) : _context.Set<T>();
 
             if (expression == null)
                 return baseQuery.AsQueryable();
             return baseQuery.Where(expression).AsQueryable();
         }
 
-        public async Task Store(T document)
+        public virtual async Task Store(T document)
         {
             await _context.Set<T>().AddAsync(document);
         }
@@ -41,6 +40,11 @@ namespace Library.Application.Infrastructure.Repositories
         public void WithDbContext(LibraryDbContext dbContext)
         {
             _context = dbContext;
+        }
+
+        public async Task CommitChanges()
+        {
+            await _context.SaveChangesAsync();
         }
     }
 }

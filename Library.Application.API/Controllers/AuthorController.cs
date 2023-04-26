@@ -1,5 +1,6 @@
 ﻿using Library.Application.API.Controllers.Abstract;
-using Library.Application.Application.Commands.Authors;
+using Library.Application.Application.Commands.Authors.CreateAuthor;
+using Library.Application.Application.Commands.Authors.DeleteAuthor;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Library.Application.API.Controllers

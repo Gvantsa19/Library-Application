@@ -5,7 +5,9 @@ using Library.Application.Infrastructure.Repositories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using Library.Application.Application.Commands.Authors.Handlers;
+using Library.Application.Application.Commands.Authors.CreateAuthor;
+using Library.Application.Application.Behaviors;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +30,11 @@ builder.Services.AddDbContext<LibraryDbContext>(o => o.UseSqlServer(builder.Conf
 //builder.Services.AddMediatR(typeof(Program));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateAuthorCommandHandler).Assembly));
 builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+builder.Services.AddValidatorsFromAssembly(typeof(CreateAuthorCommandHandler).Assembly);
 
 
 

@@ -198,3 +198,5 @@ C:\Users\user\Desktop\library\Library.Application.API\bin\Debug\net6.0\Library.A
 C:\Users\user\Desktop\library\Library.Application.API\bin\Debug\net6.0\Library.Application.Shared.dll
 C:\Users\user\Desktop\library\Library.Application.API\bin\Debug\net6.0\Library.Application.Application.pdb
 C:\Users\user\Desktop\library\Library.Application.API\bin\Debug\net6.0\Library.Application.Shared.pdb
+C:\Users\user\Desktop\library\Library.Application.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\user\Desktop\library\Library.Application.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

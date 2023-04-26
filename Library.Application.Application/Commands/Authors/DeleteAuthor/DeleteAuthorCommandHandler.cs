@@ -3,7 +3,7 @@ using Library.Application.Shared;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Library.Application.Application.Commands.Authors.Handlers
+namespace Library.Application.Application.Commands.Authors.DeleteAuthor
 {
     public sealed class DeleteAuthorCommandHandler : IRequestHandler<DeleteAuthorCommand, ApplicationResult>
     {

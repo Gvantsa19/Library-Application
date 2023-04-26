@@ -1,5 +1,7 @@
 ﻿using Library.Application.API.Controllers.Abstract;
-using Library.Application.Application.Commands.Books;
+using Library.Application.Application.Commands.Books.CreateBook;
+using Library.Application.Application.Commands.Books.DeleteBook;
+using Library.Application.Application.Commands.Books.UpdateBook;
 using Library.Application.Application.Queries.books;
 using Microsoft.AspNetCore.Mvc;
 
