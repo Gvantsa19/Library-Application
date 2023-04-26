@@ -1,16 +1,35 @@
+using FluentValidation.AspNetCore;
 using Library.Application.Infrastructure.Persistance;
+using Library.Application.Infrastructure.Repositories.Abstraction;
+using Library.Application.Infrastructure.Repositories;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using Library.Application.Application.Commands.Authors.Handlers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+                .AddFluentValidation(options =>
+                {
+                    options.ImplicitlyValidateChildProperties = true;
+                    options.ImplicitlyValidateRootCollectionElements = true;
+                
+                    options.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+                
+                });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<LibraryDbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+//builder.Services.AddMediatR(typeof(Program));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateAuthorCommandHandler).Assembly));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+
+
 
 var app = builder.Build();
 
