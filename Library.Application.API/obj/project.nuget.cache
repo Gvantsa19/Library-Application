@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LVfGxHJUg7RahpVyKfCMrAx3z1DjCjDtIEptK4LHpi4NeBMEaphhTGjEJcXq52nFbOeyyuitps3kdynuarMorw==",
+  "dgSpecHash": "IeCmxOcT52g2+O/pb5On0CQonppzktmOHk+8iKaBg4+JupnrRnV3ya3pxYlQVeHZ2Up8iQt34CXiHBRM39nnUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\library\\Library.Application.API\\Library.Application.API.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\New folder (8)\\Library-Application\\Library.Application.API\\Library.Application.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

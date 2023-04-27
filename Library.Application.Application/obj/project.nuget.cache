@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ljqP4deG1oxocz8b97lvcqAuvsILuxex1uMidctwq4xN4LMgS3ML3u1wGeLV37QUOjM+gANxXGJcI6QRWxml3w==",
+  "dgSpecHash": "1L331CE0AnNFAEh/2Mp98anJJQO5gw7gGP7vw4HJ2j+j5Hk71YZCgaeoiuyh9PWkW/v1BFUIxe9dYbFN5gxnQw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\library\\Library.Application.Application\\Library.Application.Application.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\New folder (8)\\Library-Application\\Library.Application.Application\\Library.Application.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
