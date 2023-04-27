@@ -8,6 +8,8 @@ using System.Reflection;
 using Library.Application.Application.Commands.Authors.CreateAuthor;
 using Library.Application.Application.Behaviors;
 using FluentValidation;
+using Library.Application.Application.Queries.books;
+using Library.Application.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +37,7 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 builder.Services.AddValidatorsFromAssembly(typeof(CreateAuthorCommandHandler).Assembly);
+
 
 
 

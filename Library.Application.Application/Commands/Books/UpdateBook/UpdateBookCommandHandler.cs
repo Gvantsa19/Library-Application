@@ -13,16 +13,19 @@ namespace Library.Application.Application.Commands.Books.UpdateBook
         private readonly IRepository<Book> _repository;
         private readonly LibraryDbContext _library;
         private readonly IValidator<UpdateBookCommand> _validator;
+        private readonly IUnitOfWork _unitOfWork;
 
         public UpdateBookCommandHandler(
-            IRepository<Book> repository, 
+            IRepository<Book> repository,
             LibraryDbContext library,
-            IValidator<UpdateBookCommand> validator
+            IValidator<UpdateBookCommand> validator,
+            IUnitOfWork unitOfWork
         )
         {
             _repository = repository;
             _library = library;
             _validator = validator;
+            _unitOfWork = unitOfWork;
         }
         public async Task<ApplicationResult> Handle(UpdateBookCommand request, CancellationToken cancellationToken)
         {
@@ -30,11 +33,20 @@ namespace Library.Application.Application.Commands.Books.UpdateBook
             var book = await _library.Book
                                    .SingleOrDefaultAsync(b => b.Id == request.Id, cancellationToken);
 
-            if (book == null) { return null; }
+            if (book == null) 
+            {
+                return new ApplicationResult
+                {
+                    Success = false,
+                    Data = "book does not exist!",
+                    Errors = null
+                };
+            }
 
-            book = new Book(request.Title, request.Description);
+            book.Title = request.Title;
+            book.Description = request.Description;
 
-            await _library.SaveChangesAsync();
+            await _unitOfWork.SaveChangesAsync();
 
             return new ApplicationResult
             {

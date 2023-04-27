@@ -8,6 +8,6 @@ namespace Library.Application.Infrastructure.Entities
         string LastName
     ) : EntityBase
     {
-        public ICollection<Book> Book { get; set; }
+        public ICollection<Book> Books { get; set; }
     }
 }

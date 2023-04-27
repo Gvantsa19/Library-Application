@@ -1,13 +1,14 @@
 ﻿using Library.Application.Infrastructure.Entities.Abstract;
+using System.Text.Json.Serialization;
 
 namespace Library.Application.Infrastructure.Entities
 {
-    public record Book
-    (
-        string Title,
-        string Description
-    ) : EntityBase
+    public record Book : EntityBase
     {
-        public ICollection<Author> Author { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int AuthorId { get; set; }
+        [JsonIgnore]
+        public Author Author { get; set; }
     }
 }

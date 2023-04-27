@@ -10,12 +10,12 @@ namespace Library.Application.API.Controllers
     [Route("api/books")]
     public class BooksControllers : APIController
     {
-        [HttpPost("get")]
-        public async Task<IActionResult> Get(GetAllBooksQuery req)
+        [HttpGet]
+        public async Task<IActionResult> Get([FromQuery] GetAllBooksQuery req)
             => Ok(await Mediator.Send(req));
 
-        [HttpPost("getByAuthor")]
-        public async Task<IActionResult> GetByAuthor(GetBooksByAuthorQuery req)
+        [HttpGet("getByAuthor")]
+        public async Task<IActionResult> GetByAuthor([FromQuery] GetBooksByAuthorQuery req)
             => Ok(await Mediator.Send(req));
 
         [HttpPost("create")]
