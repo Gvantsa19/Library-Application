@@ -3516,11 +3516,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\New folder (8)\\Library-Application\\Library.Application.Infrastructure\\Library.Application.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Library-Application\\Library.Application.Infrastructure\\Library.Application.Infrastructure.csproj",
       "projectName": "Library.Application.Infrastructure",
-      "projectPath": "C:\\Users\\user\\Desktop\\New folder (8)\\Library-Application\\Library.Application.Infrastructure\\Library.Application.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\Library-Application\\Library.Application.Infrastructure\\Library.Application.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\New folder (8)\\Library-Application\\Library.Application.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\Library-Application\\Library.Application.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

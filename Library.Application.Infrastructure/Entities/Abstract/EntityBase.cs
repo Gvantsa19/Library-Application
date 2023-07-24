@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Library.Application.Infrastructure.Entities.Abstract
 {
-    public record class EntityBase
+    public class EntityBase
     {
         [Key]
         public int Id { get; set; }

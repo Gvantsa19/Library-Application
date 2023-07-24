@@ -5,11 +5,14 @@ using Library.Application.Infrastructure.Repositories;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using Library.Application.Application.Commands.Authors.CreateAuthor;
 using Library.Application.Application.Behaviors;
 using FluentValidation;
-using Library.Application.Application.Queries.books;
 using Library.Application.Shared;
+using Library.Application.Application.Commands.Roles;
+using Library.Application.Application.Commands.Users.Register;
+using Library.Application.Application.Commands.Users.Login;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Library.Aoolication.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,16 +31,21 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 builder.Services.AddDbContext<LibraryDbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 //builder.Services.AddMediatR(typeof(Program));
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateAuthorCommandHandler).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
+//builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateAuthorCommandHandler).Assembly));
 builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-builder.Services.AddValidatorsFromAssembly(typeof(CreateAuthorCommandHandler).Assembly);
-
+//builder.Services.AddValidatorsFromAssembly(typeof(CreateAuthorCommandHandler).Assembly);
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateRoleCommandHandler).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(LoginCommandHandler).Assembly));
+builder.Services.AddTransient<IValidator<RegisterUserCommand>, RegisterUserCommandValidator>();
+builder.Services.AddTransient<IValidator<CreateRoleCommand>, CreateRoleCommandHandlerValidator>();
 
 
 

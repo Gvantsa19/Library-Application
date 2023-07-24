@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9qMgZ84OQHILwPjlFgPsm+yoWaGcRnOLwwhX20NA+79u+uxFHhqEhK9yHzHQkp72c9Hu2N9cVLCcT8mQPR5Pbg==",
+  "dgSpecHash": "QaMTzau4R5iOphkARTs9o7Z9n04bPzO4uUi/9IglTcIH+F33cSw3ewyRzzJ3Tdk6psxbhtELBVKy4Ni10ShOxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\New folder (8)\\Library-Application\\Library.Application.Infrastructure\\Library.Application.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\Library-Application\\Library.Application.Infrastructure\\Library.Application.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

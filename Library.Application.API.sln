@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Application.API", "Library.Application.API\Library.Application.API.csproj", "{CFDE7B6B-2A10-4DE5-8569-A44A68B8B2B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Application.API", "Library.Application.API\Library.Application.API.csproj", "{CFDE7B6B-2A10-4DE5-8569-A44A68B8B2B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Application.Application", "Library.Application.Application\Library.Application.Application.csproj", "{71FDF6BC-2DB8-493B-8356-3B2708FEAE4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Application.Application", "Library.Application.Application\Library.Application.Application.csproj", "{71FDF6BC-2DB8-493B-8356-3B2708FEAE4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Application.Infrastructure", "Library.Application.Infrastructure\Library.Application.Infrastructure.csproj", "{6FAEBD34-4B6E-44DF-94DB-27600B8A8AB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Application.Infrastructure", "Library.Application.Infrastructure\Library.Application.Infrastructure.csproj", "{6FAEBD34-4B6E-44DF-94DB-27600B8A8AB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Application.Shared", "Library.Application.Shared\Library.Application.Shared.csproj", "{640E28ED-C734-4F11-9622-3BC431BC3A8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Application.Shared", "Library.Application.Shared\Library.Application.Shared.csproj", "{640E28ED-C734-4F11-9622-3BC431BC3A8F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Application.Tests", "Library.Application.Tests\Library.Application.Tests.csproj", "{180EEA79-F78E-41E6-BF71-9DB125864FCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Application.Identity", "Library.Aoolication.Identity\Library.Application.Identity.csproj", "{DB4BF22B-42B0-43AF-95B5-55EF297D5600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{180EEA79-F78E-41E6-BF71-9DB125864FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{180EEA79-F78E-41E6-BF71-9DB125864FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{180EEA79-F78E-41E6-BF71-9DB125864FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB4BF22B-42B0-43AF-95B5-55EF297D5600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4BF22B-42B0-43AF-95B5-55EF297D5600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4BF22B-42B0-43AF-95B5-55EF297D5600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4BF22B-42B0-43AF-95B5-55EF297D5600}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
