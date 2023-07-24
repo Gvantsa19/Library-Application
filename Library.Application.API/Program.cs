@@ -47,7 +47,15 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(Log
 builder.Services.AddTransient<IValidator<RegisterUserCommand>, RegisterUserCommandValidator>();
 builder.Services.AddTransient<IValidator<CreateRoleCommand>, CreateRoleCommandHandlerValidator>();
 
-
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("http://localhost:4200") // Add your Angular app's URL here
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
