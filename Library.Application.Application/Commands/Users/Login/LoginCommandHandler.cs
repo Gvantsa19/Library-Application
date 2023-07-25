@@ -4,7 +4,6 @@ using Library.Application.Infrastructure.Repositories.Abstraction;
 using Library.Application.Shared;
 using MediatR;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -38,17 +37,21 @@ namespace Library.Application.Application.Commands.Users.Login
                 string hashed = EncryptPassword(request.Password, user.Salt);
                 if (hashed == user.Password)
                 {
+                    string token = CreateToken(user);
 
+                    return await Ok(new AuthorizedDto
+                    {
+                        AuthToken = token,
+                        ExpiresIn = DateTime.Now.AddDays(1),
+                    });
                 }
             }
 
-            string token = CreateToken(user);
-
-            return await Ok(new AuthorizedDto
+            return new ApplicationResult
             {
-                AuthToken = token,
-                ExpiresIn = DateTime.Now.AddDays(1),
-            });
+                Errors = null,
+                Success = false,
+            };
         }
 
         private string EncryptPassword(string password, string salt)

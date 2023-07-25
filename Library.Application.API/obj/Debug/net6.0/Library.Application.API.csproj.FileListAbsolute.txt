@@ -433,3 +433,7 @@ C:\Users\user\Desktop\Library-Application\Library.Application.API\bin\Debug\net6
 C:\Users\user\Desktop\Library-Application\Library.Application.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\user\Desktop\Library-Application\Library.Application.API\bin\Debug\net6.0\Library.Application.Identity.dll
 C:\Users\user\Desktop\Library-Application\Library.Application.API\bin\Debug\net6.0\Library.Application.Identity.pdb
+C:\Users\user\Desktop\Library-Application\Library.Application.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\user\Desktop\Library-Application\Library.Application.API\bin\Debug\net6.0\Scrutor.dll
+C:\Users\user\Desktop\Library-Application\Library.Application.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\user\Desktop\Library-Application\Library.Application.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
