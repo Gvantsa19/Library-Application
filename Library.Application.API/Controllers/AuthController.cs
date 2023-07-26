@@ -1,12 +1,8 @@
 ﻿using Library.Application.API.Controllers.Abstract;
-using Library.Application.Application.Commands.Roles;
 using Library.Application.Application.Commands.Users.Login;
 using Library.Application.Application.Commands.Users.Register;
 using Library.Application.Shared;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Runtime.InteropServices;
-using System;
 using Library.Application.Application.Queries.Users;
 using Library.Application.Application.Commands.Users.ResetPassword;
 using Microsoft.AspNetCore.Authorization;
